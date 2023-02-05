@@ -1,0 +1,121 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Verdana, sans-serif;
+    color: beige;
+    font-size: 10pt;
+    text-shadow: 1px 1px black;
+}
+
+
+
+body{
+    background-image: url(./kepek/black.png);
+
+}
+
+header{
+    background-color: rgb(87, 86, 86);
+}
+
+nav ul li{
+    display: inline-block;
+    
+}
+
+nav ul li a{
+    display: block;
+    text-decoration: none;
+    padding: 5px;
+    border: 1px solid white;
+    font-weight: 700;
+}
+
+nav ul li a:hover{
+    background-color: orange;
+}
+
+nav ul li .active{
+    border: 1px solid rgb(255, 255, 255);
+}
+
+article p{
+    padding: 0 10px;
+}
+
+article ul{
+    padding: 5px 15px;
+    
+}
+
+article ul li{
+    list-style-type: square;
+}
+
+.upper_img img{
+    margin: 0 auto;
+    display: block;
+    max-height: 300px;
+    background-size: cover;
+}
+
+aside img{
+    display: block;
+    max-height: 500px;
+}
+
+main{
+    max-width: 900px;
+    width: 90%;
+    background-color: hsl(208, 100%, 97%);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: 
+    "h h"
+    "a as"
+    "f f";
+}
+
+header{
+    grid-area: h;
+
+}
+
+article{
+    grid-area: a;
+    text-align: justify;
+}
+
+article h3{
+    font-size: 15px;
+    padding: 5px;
+}
+
+aside{
+    grid-area: as;
+}
+
+footer{
+    grid-area: f;
+}
+
+@media screen and (max-width: 700px) {
+    main{
+        max-width: 700px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "h"
+        "a"
+        "as"
+        "f";
+}
+
+nav ul li{
+    display: block;
+}
+
+}
